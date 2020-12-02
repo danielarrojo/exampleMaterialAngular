@@ -4,12 +4,34 @@
   <div fxFlex class="right" style="background-color: red;">RightRightRight</div>
 </div>-->
 
-<div fxFlex class="parent" fxLayout="row" fxLayoutGap="30px">
+<!--<div fxFlex class="parent" fxLayout="row" fxLayoutGap="30px">
   <div fxFlex class="left" fxLayout="column" >
     <div fxFlex="50" style="background-color: blue;">Blue</div>
-    <div fxFlex style="background-color: red;">Red</div>
-    <div fxFlex style="background-color: pink;">Pink</div>
+      <div fxFlex="40" style="background-color: red;">Red</div>
+      <div fxFlex style="background-color: pink;">Pink</div>
   </div>
   <div fxFlex class="right">Right</div>
+</div>-->
+
+<!--<mat-toolbar class="toGreen" fxLayout="row" fxLayoutAlign="space-between center">
+    <div>Material example</div>
+    <div fxLayoutGap="15px">
+      <span>Welcome</span>
+      <span>Elementos</span>
+      <span>Contacto</span>
+    </div>
+</mat-toolbar>-->
+
+<div>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+      <app-side-nav-list (sidenavClose)="sidenav.close()"></app-side-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <app-header-toolbar (sidenavToggle)="sidenav.toggle()"></app-header-toolbar>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
-<div>Cambio en el git</div>
