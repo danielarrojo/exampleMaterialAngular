@@ -8,7 +8,7 @@ import { Component, EventEmitter, OnInit } from '@angular/core';
 })
 export class SideNavListComponent implements OnInit {
 
-  @Output()  sidenavClose = new EventEmitter();
+  @Output() sidenavClose = new EventEmitter();
 
   constructor() { }
 
