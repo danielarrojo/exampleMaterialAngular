@@ -9,3 +9,34 @@
     z-index:1;
     background-color:inherit;
 }
+.mat-row:hover{
+    background-color:lightgray;
+    cursor: pointer;
+}
+
+
+
+
+
+img{
+    width: 30px;
+    height: 30px;
+}
+
+.loader{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:56px;
+    right:0;
+    background: rgba(0,0,0,0.15);
+    z-index:2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.data-error{
+    color:red;
+    max-width: 360px;
+    text-align: center;
+}

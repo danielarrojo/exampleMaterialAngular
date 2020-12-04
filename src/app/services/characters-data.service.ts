@@ -17,7 +17,7 @@ export class CharactersDataService {
     return this.http.get<Characters>(this.apiUrl+this.charactersUrl);
   }
 
-  getCharactersPaged(page:number):Observable<Characters>{
+  getCharactersPaged(sort: string, page:number):Observable<Characters>{
     const requestUrl = this.apiUrl + this.charactersUrl + '?page=' + (page);
     return this.http.get<Characters>(requestUrl);
   }
