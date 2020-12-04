@@ -1,13 +1,17 @@
 <mat-nav-list>
-    <a mat-list-item (click)="onSidenavClose()">
+    <a mat-list-item (click)="onSidenavClose()" [routerLink]="['/welcome']">
         <mat-icon>pan_tool</mat-icon>
         <span>Welcome</span>
     </a>
-    <a mat-list-item (click)="onSidenavClose()">
+    <a mat-list-item (click)="onSidenavClose()" [routerLink]="['/charactergrid']">
         <mat-icon>dashboard</mat-icon>
-        <span>Elementos</span>
+        <span>Grid Cards</span>
     </a>
-    <a  mat-list-item (click)="onSidenavClose()">
+    <a  mat-list-item (click)="onSidenavClose()" [routerLink]="['/characterlist']">
+        <mat-icon>view_list</mat-icon>
+        <span>List Cards</span>
+    </a>
+    <a  mat-list-item (click)="onSidenavClose()" [routerLink]="['/contact']">
         <mat-icon>settings_phone</mat-icon>
         <span>Contacto</span>
     </a>

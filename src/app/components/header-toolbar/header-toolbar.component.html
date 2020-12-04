@@ -1,22 +1,25 @@
 <mat-toolbar class="toGreen">
     <!-- Control lateral-->
     <div fxHide.gt-xs>
-      <button (click)="onToggleSidenav()">Menu</button>
+      <button (click)="onToggleSidenav()" >Menu</button>
     </div>
     <div fxHide.xs>
-      <a href="">Material Example</a>
+      <a [routerLink]="['/']">Material Example</a>
     </div>
     <!-- Botones barra-->
     <div fxFlex fxLayoutAlign="end" fxHide.xs>
       <ul fxLayout fxLayoutGap="25px" class="navigation-item">
         <li>
-          <a href="">Welcome</a>
+          <a [routerLink]="['/welcome']">Welcome</a>
         </li>
         <li>
-          <a href="">Elementos</a>
+          <a [routerLink]="['/charactergrid']">Grid Cards</a>
         </li>
         <li>
-          <a href="">Contacto</a>
+          <a [routerLink]="['/characterlist']">List Cards</a>
+        </li>
+        <li>
+          <a [routerLink]="['/contact']">Contacto</a>
         </li>
       </ul>
     </div>

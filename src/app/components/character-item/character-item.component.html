@@ -1,0 +1,13 @@
+<mat-card class="mat-elevation-4">
+    <mat-card-header>
+        <mat-card-title>{{character.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{character.image}}">
+    <mat-card-content>
+        <p>{{character.species}}</p>
+    </mat-card-content>
+    <mat-card-actions fxLayoutAlign="end" fxLayoutGap="10px">
+        <mat-icon class="favorite">favorite</mat-icon>
+        <mat-icon>share</mat-icon>
+    </mat-card-actions>
+</mat-card>

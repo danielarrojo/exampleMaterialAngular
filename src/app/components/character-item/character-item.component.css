@@ -1,0 +1,9 @@
+mat-icon:hover {
+opacity: .5;
+cursor: pointer;
+color:pink;
+}
+
+.favorite {
+    color: red;
+}
