@@ -36,6 +36,45 @@
                     </td>
                 </tr>
 
+               <!-- Birth of Date - > DatePicker-->
+               <tr>
+                    <td colspan="2">
+                        <mat-form-field class="full-width">
+                            <input formControlName="birthDate" matInput [matDatepicker]="picker" placeholder="Insert your date of birth here..."> 
+                            <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+                            <mat-datepicker  touchUi="true" #picker></mat-datepicker>
+                        </mat-form-field>
+                        <mat-error>
+                            <span *ngIf="!contactForm.get('birthDate')?.valid && contactForm.get('birthDate')?.touched">Insert a valid date, please!!!</span>
+                        </mat-error>
+                    </td>
+                </tr>
+
+                <!-- Gender - Radio Button -->
+                <tr>
+                    <td>
+                        <span>Gender</span><br><br>
+                        <mat-radio-group formControlName="gender">
+                            <mat-radio-button value="male">Male</mat-radio-button>
+                            <mat-radio-button value="female">Female</mat-radio-button>
+                            <mat-radio-button value="others">Others</mat-radio-button>
+                        </mat-radio-group>
+                        <mat-error>
+                            <span *ngIf="!contactForm.get('gender')?.valid && contactForm.get('gender')?.touched">Please, select any gender</span>
+                        </mat-error>
+                    </td>
+                </tr><br>
+                <!-- Email -->
+                <tr >             
+                    <td colspan="2">
+                        <mat-form-field class="full-width">
+                            <input type="email" formControlName="email" matInput placeholder="Insert your email here...">
+                        </mat-form-field>
+                        <mat-error>
+                            <span *ngIf="!contactForm.get('email')?.valid && contactForm.get('email')?.touched">Insert a valid last name, please!!!</span>
+                        </mat-error>
+                    </td>
+                </tr>
 
                 <!-- Submit Button -->
                 <tr>
