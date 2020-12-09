@@ -1,1 +1,49 @@
-<p>contact works!</p>
+<mat-card>
+    <mat-card-title>
+        Form Contact
+    </mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)" novalidate>
+            <table>
+                <!-- First nmae & last name -->
+                <tr>
+                    <td>
+                        <mat-form-field class="full-width">
+                            <input formControlName="firstName" matInput placeholder="Insert first name here...">
+                        </mat-form-field>
+                        <mat-error>
+                            <span *ngIf="!contactForm.get('firstName')?.valid && contactForm.get('firstName')?.touched">Insert a valid first name, please!!!</span>
+                        </mat-error>
+                    </td>
+                    <td>
+                        <mat-form-field class="full-width">
+                            <input formControlName="lastName" matInput placeholder="Insert last name here...">
+                        </mat-form-field>
+                        <mat-error>
+                            <span *ngIf="!contactForm.get('lastName')?.valid && contactForm.get('lastName')?.touched">Insert a valid last name, please!!!</span>
+                        </mat-error>
+                    </td>
+                </tr>
+                <!-- Address - > Text area-->
+                <tr>
+                    <td colspan="2">
+                        <mat-form-field class="full-width">
+                            <textarea formControlName="address" matInput placeholder="Type your address here..." matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>
+                        </mat-form-field>
+                        <mat-error>
+                            <span *ngIf="!contactForm.get('address')?.valid && contactForm.get('address')?.touched">Insert a valid address, please!!!</span>
+                        </mat-error>
+                    </td>
+                </tr>
+
+
+                <!-- Submit Button -->
+                <tr>
+                    <td class="contact-center">
+                        <button mat-raised-button color="primary" [disabled]=!contactForm.valid>Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </mat-card-content>
+</mat-card>

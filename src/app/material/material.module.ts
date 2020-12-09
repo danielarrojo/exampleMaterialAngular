@@ -8,6 +8,15 @@ import { MatTableModule } from '@angular/material/table'
 import { MatSortModule } from '@angular/material/sort'
 import { MatPaginatorModule } from '@angular/material/paginator'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatInputModule } from '@angular/material/input'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatDatepickerModule } from '@angular/material/datepicker'
+import { MatNativeDateModule } from '@angular/material/core'
+import { MatRadioModule } from '@angular/material/radio'
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatSelectModule } from '@angular/material/select'
+import { MatButtonModule } from '@angular/material/button'
+import { MatTooltipModule } from '@angular/material/tooltip'
 
 const MaterialComponents: any[] | Type<any> | ModuleWithProviders<{}> = [];
 
@@ -23,7 +32,16 @@ const MaterialComponents: any[] | Type<any> | ModuleWithProviders<{}> = [];
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatSlideToggleModule,
+    MatButtonModule,
+    MatTooltipModule, 
+    MatSelectModule
   ],
   exports: [
     MaterialComponents,
@@ -35,7 +53,16 @@ const MaterialComponents: any[] | Type<any> | ModuleWithProviders<{}> = [];
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatSlideToggleModule,
+    MatButtonModule,
+    MatTooltipModule, 
+    MatSelectModule
   ]
 })
 export class MaterialModule { }

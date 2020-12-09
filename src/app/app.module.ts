@@ -15,6 +15,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CharacterItemComponent } from './components/character-item/character-item.component';
 import { CharacterListComponent } from './components/character-list/character-list.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { CharacterListComponent } from './components/character-list/character-li
     ContactComponent,
     CharacterItemComponent,
     CharacterListComponent
+  
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,9 @@ import { CharacterListComponent } from './components/character-list/character-li
     MaterialModule,
     FlexLayoutModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
