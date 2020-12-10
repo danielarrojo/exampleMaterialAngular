@@ -1,0 +1,28 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circular {
+    border-radius: 50%;
+}
+
+.circular img{
+    height: 30px;
+    width: 30px;
+}
+.card {
+    min-width: 400px;
+    max-width: 800px;
+}
+.mat-card-header-text{
+    margin:0 32px;
+}
+.mat-icon{
+    margin-right:12px;
+}
+.mat-icon:hover{
+    opacity: .5;
+    cursor: pointer;
+}

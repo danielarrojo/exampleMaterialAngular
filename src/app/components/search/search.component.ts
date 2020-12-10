@@ -59,5 +59,11 @@ export class SearchComponent implements OnInit {
     this.character = char;
   };
 
+  addFavorite(){
+    console.log('addFavorite');
+  }
 
+  shareCharacter(){
+    console.log('shareCharacter');
+  }
 }

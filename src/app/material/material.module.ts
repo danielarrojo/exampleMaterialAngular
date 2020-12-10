@@ -18,6 +18,7 @@ import { MatSelectModule } from '@angular/material/select'
 import { MatButtonModule } from '@angular/material/button'
 import { MatTooltipModule } from '@angular/material/tooltip'
 import { MatAutocompleteModule } from '@angular/material/autocomplete'
+import { MatChipsModule } from '@angular/material/chips'
 
 const MaterialComponents: any[] | Type<any> | ModuleWithProviders<{}> = [];
 
@@ -43,7 +44,8 @@ const MaterialComponents: any[] | Type<any> | ModuleWithProviders<{}> = [];
     MatButtonModule,
     MatTooltipModule, 
     MatSelectModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatChipsModule
   ],
   exports: [
     MaterialComponents,
@@ -65,7 +67,8 @@ const MaterialComponents: any[] | Type<any> | ModuleWithProviders<{}> = [];
     MatButtonModule,
     MatTooltipModule, 
     MatSelectModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatChipsModule
   ]
 })
 export class MaterialModule { }
