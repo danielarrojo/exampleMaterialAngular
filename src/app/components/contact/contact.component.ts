@@ -9,12 +9,22 @@ import { FormGroup, NgForm, FormControl, Validators} from '@angular/forms'
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   patternEmail: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  isAccepted:number = 0;
 
   constructor() { 
     this.contactForm = this.createFormGroup();
   }
 
   ngOnInit(): void {
+  }
+
+  onChangeTerms(event:any){
+    if (event.checked == true){
+      this.isAccepted=1;
+    } else {
+      this.isAccepted=0;
+    }
+    console.log('this.isAccepted : ',this.isAccepted);
   }
 
   onSubmit(form:NgForm){
@@ -28,7 +38,9 @@ export class ContactComponent implements OnInit {
       address : new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(50)]),
       email : new FormControl('', [Validators.required, Validators.pattern(this.patternEmail)]),
       birthDate : new FormControl('', [Validators.required]),
-      gender: new FormControl('', [Validators.required])
+      gender: new FormControl('', [Validators.required]),
+      job: new FormControl('', [Validators.required]),
+      isAccepted: new FormControl()
     });
   }
 

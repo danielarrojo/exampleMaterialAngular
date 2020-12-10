@@ -50,6 +50,19 @@
                     </td>
                 </tr>
 
+ 
+                <!-- Email -->
+                <tr >             
+                    <td colspan="2">
+                        <mat-form-field class="full-width">
+                            <input type="email" formControlName="email" matInput placeholder="Insert your email here...">
+                            <mat-hint>use like: user@company.com</mat-hint>
+                        </mat-form-field>
+                        <mat-error>
+                            <span *ngIf="!contactForm.get('email')?.valid && contactForm.get('email')?.touched">Insert a valid email format, please!!!</span>
+                        </mat-error>
+                    </td>
+                </tr><br>       
                 <!-- Gender - Radio Button -->
                 <tr>
                     <td>
@@ -64,22 +77,32 @@
                         </mat-error>
                     </td>
                 </tr><br>
-                <!-- Email -->
-                <tr >             
-                    <td colspan="2">
-                        <mat-form-field class="full-width">
-                            <input type="email" formControlName="email" matInput placeholder="Insert your email here...">
+                <!-- Job type - Options -->
+                <tr>
+                    <td>
+                        <mat-form-field>
+                            <mat-select formControlName="job" placeholder="Select your job...">
+                                <mat-option disabled> -- select any -- </mat-option>
+                                <mat-option value="developer">Developer</mat-option>
+                                <mat-option value="sales">Sales</mat-option>
+                                <mat-option value="designer">Designer</mat-option>
+                            </mat-select>
                         </mat-form-field>
                         <mat-error>
-                            <span *ngIf="!contactForm.get('email')?.valid && contactForm.get('email')?.touched">Insert a valid last name, please!!!</span>
+                            <span *ngIf="!contactForm.get('job')?.valid && contactForm.get('job')?.touched">Please, select any job</span>
                         </mat-error>
                     </td>
                 </tr>
-
+                <!-- T&C - Slide-toogle -->
+                <tr>
+                    <td colspan="2">
+                        <mat-slide-toggle formControlName="isAccepted" (change)="onChangeTerms($event)">I accept the Terms & Conditions</mat-slide-toggle>
+                    </td>
+                </tr><br>
                 <!-- Submit Button -->
                 <tr>
                     <td class="contact-center">
-                        <button mat-raised-button color="primary" [disabled]=!contactForm.valid>Submit</button>
+                        <button mat-raised-button color="primary" [disabled]="!contactForm.valid || isAccepted==0">Submit</button>
                     </td>
                 </tr>
             </table>
