@@ -17,6 +17,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { MatSelectModule } from '@angular/material/select'
 import { MatButtonModule } from '@angular/material/button'
 import { MatTooltipModule } from '@angular/material/tooltip'
+import { MatAutocompleteModule } from '@angular/material/autocomplete'
 
 const MaterialComponents: any[] | Type<any> | ModuleWithProviders<{}> = [];
 
@@ -41,7 +42,8 @@ const MaterialComponents: any[] | Type<any> | ModuleWithProviders<{}> = [];
     MatSlideToggleModule,
     MatButtonModule,
     MatTooltipModule, 
-    MatSelectModule
+    MatSelectModule,
+    MatAutocompleteModule
   ],
   exports: [
     MaterialComponents,
@@ -62,7 +64,8 @@ const MaterialComponents: any[] | Type<any> | ModuleWithProviders<{}> = [];
     MatSlideToggleModule,
     MatButtonModule,
     MatTooltipModule, 
-    MatSelectModule
+    MatSelectModule,
+    MatAutocompleteModule
   ]
 })
 export class MaterialModule { }

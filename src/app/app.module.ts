@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CharacterItemComponent } from './components/character-item/character-item.component';
 import { CharacterListComponent } from './components/character-list/character-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     WelcomeComponent,
     ContactComponent,
     CharacterItemComponent,
-    CharacterListComponent
+    CharacterListComponent,
+    SearchComponent
   
   ],
   imports: [

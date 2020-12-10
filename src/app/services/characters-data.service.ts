@@ -22,4 +22,9 @@ export class CharactersDataService {
     return this.http.get<Characters>(requestUrl);
   }
 
+  getCharactersByName(name:string):Observable<Characters>{
+    const requestUrl = this.apiUrl + this.charactersUrl + '?name=' + (name);
+    return this.http.get<Characters>(requestUrl);
+  }
+
 }
