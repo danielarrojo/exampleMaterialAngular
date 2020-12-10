@@ -11,6 +11,9 @@ export class ContactComponent implements OnInit {
   patternEmail: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   isAccepted:number = 0;
 
+  showDelay = new FormControl(1000);
+  hideDelay = new FormControl(1000);
+
   constructor() { 
     this.contactForm = this.createFormGroup();
   }

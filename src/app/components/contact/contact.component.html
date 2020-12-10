@@ -1,11 +1,16 @@
 <mat-card>
-    <mat-card-title>
+    <mat-card-title matTooltip="You must complete all the form fields" 
+        matTooltipClass="danger-tooltip-class" 
+        matTooltipPosition="above"
+        [matTooltipShowDelay]="showDelay.value"
+        [matTooltipHideDelay]="hideDelay.value"
+        >
         Form Contact
     </mat-card-title>
     <mat-card-content>
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)" novalidate>
             <table>
-                <!-- First nmae & last name -->
+                <!-- First name & last name -->
                 <tr>
                     <td>
                         <mat-form-field class="full-width">
@@ -62,7 +67,8 @@
                             <span *ngIf="!contactForm.get('email')?.valid && contactForm.get('email')?.touched">Insert a valid email format, please!!!</span>
                         </mat-error>
                     </td>
-                </tr><br>       
+                </tr><br>   
+
                 <!-- Gender - Radio Button -->
                 <tr>
                     <td>
@@ -102,7 +108,7 @@
                 <!-- Submit Button -->
                 <tr>
                     <td class="contact-center">
-                        <button mat-raised-button color="primary" [disabled]="!contactForm.valid || isAccepted==0">Submit</button>
+                        <button mat-raised-button color="primary" [disabled]="!contactForm.valid || isAccepted==0"  >Submit</button>
                     </td>
                 </tr>
             </table>
