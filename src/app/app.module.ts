@@ -17,6 +17,10 @@ import { CharacterItemComponent } from './components/character-item/character-it
 import { CharacterListComponent } from './components/character-list/character-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchComponent } from './components/search/search.component';
+import { DemoDialogComponent } from './components/dialogs/demo-dialog/demo-dialog.component';
+import { MapsComponent } from './components/maps/maps.component';
+import { AgmCoreModule } from '@agm/core';
+import { MatGoogleMapsAutocompleteModule } from '@angular-material-extensions/google-maps-autocomplete';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,9 @@ import { SearchComponent } from './components/search/search.component';
     ContactComponent,
     CharacterItemComponent,
     CharacterListComponent,
-    SearchComponent
+    SearchComponent,
+    DemoDialogComponent,
+    MapsComponent
   
   ],
   imports: [
@@ -40,7 +46,12 @@ import { SearchComponent } from './components/search/search.component';
     RouterModule.forRoot(routes),
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey:'AIzaSyD2QUQ948zFPWxF7mSp02Nz6ncZ_uaKBcQ', 
+      libraries: ['places']
+    }),
+    MatGoogleMapsAutocompleteModule
 
   ],
   providers: [],

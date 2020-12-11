@@ -15,6 +15,10 @@
         <mat-icon>search</mat-icon>
         <span>Search</span>
     </a>
+    <a  mat-list-item (click)="onSidenavClose()" [routerLink]="['/maps']">
+        <mat-icon>explore</mat-icon>
+        <span>Map</span>
+    </a>
     <a  mat-list-item (click)="onSidenavClose()" [routerLink]="['/contact']">
         <mat-icon>settings_phone</mat-icon>
         <span>Contact</span>

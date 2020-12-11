@@ -18,7 +18,7 @@ export class ContactComponent implements OnInit {
     this.contactForm = this.createFormGroup();
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
   }
 
   onChangeTerms(event:any){

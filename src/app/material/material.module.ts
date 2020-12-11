@@ -19,6 +19,10 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatTooltipModule } from '@angular/material/tooltip'
 import { MatAutocompleteModule } from '@angular/material/autocomplete'
 import { MatChipsModule } from '@angular/material/chips'
+import { MatSnackBarModule } from '@angular/material/snack-bar'
+import { MatDialogModule } from '@angular/material/dialog'
+import { MatSliderModule } from '@angular/material/slider'
+import { MatExpansionModule } from '@angular/material/expansion'
 
 const MaterialComponents: any[] | Type<any> | ModuleWithProviders<{}> = [];
 
@@ -45,7 +49,11 @@ const MaterialComponents: any[] | Type<any> | ModuleWithProviders<{}> = [];
     MatTooltipModule, 
     MatSelectModule,
     MatAutocompleteModule,
-    MatChipsModule
+    MatChipsModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatSliderModule,
+    MatExpansionModule
   ],
   exports: [
     MaterialComponents,
@@ -68,7 +76,11 @@ const MaterialComponents: any[] | Type<any> | ModuleWithProviders<{}> = [];
     MatTooltipModule, 
     MatSelectModule,
     MatAutocompleteModule,
-    MatChipsModule
+    MatChipsModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatSliderModule,
+    MatExpansionModule
   ]
 })
 export class MaterialModule { }

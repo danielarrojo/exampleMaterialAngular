@@ -1,0 +1,14 @@
+<div>
+    <h2 mat-dialog-title>MY DEMO DIALOG</h2>
+    <hr>
+    <mat-dialog-content>
+       <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quasi minima numquam facilis distinctio reiciendis debitis dicta illo officia.
+        <br>>-->
+        <strong>{{data}}</strong>  
+        <hr>     
+    </mat-dialog-content>
+    <mat-dialog-actions fxLayoutAlign="end">
+        <button mat-raised-button color="accent" (click)="onCloseCancel()">CANCEL</button>
+        <button mat-raised-button color="primary" (click)="onCloseConfirm()">CONFIRM</button>
+    </mat-dialog-actions>
+</div>

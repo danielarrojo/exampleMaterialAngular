@@ -9,3 +9,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .danger-tooltip-class{
     background-color:red;
 }
+.my-snack-bar{
+    background-color: white;
+    color: blue;
+}

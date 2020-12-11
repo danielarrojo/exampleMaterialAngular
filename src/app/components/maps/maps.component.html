@@ -1,0 +1,66 @@
+
+
+<div fxLayout="row" fxLayoutAlign="space-evenly center">
+    
+    <!-- Left Tools - Form -->
+    <form fxLayout="column" [formGroup]="mapForm">
+        <span>Latitude</span>
+        <mat-form-field>
+            <input type="number" formControlName="lat" matInput placeholder="Insert latitude...">
+        </mat-form-field>
+        <span>Longitude</span>
+        <mat-form-field>
+            <input type="number" formControlName="lng" matInput placeholder="Insert longitude...">
+        </mat-form-field>
+        <span>Zoom</span>
+        <mat-slider
+            formControlName="zoom"
+            thumbLabel
+            min="1"
+            max="20">
+        </mat-slider>
+        <span>Map type</span>
+            <mat-select formControlName="mapType" placeholder="Select map type">
+                <mat-option> -- Select Any -- </mat-option>
+                <mat-option value="hybrid">Hybrid</mat-option>
+                <mat-option value="roadmap">Roadmap</mat-option>
+                <mat-option value="terrain">Terrain</mat-option>
+                <mat-option value="satellite">Satellite</mat-option>
+            </mat-select><br><br>
+        <button mat-raised-button color="primary" [disabled]="!mapForm.valid" (click)="setPosition()">SEND</button>
+    </form>
+
+    <!-- AGM MAP -->
+    <agm-map [latitude]="lat" [longitude]="lng" [mapTypeId]="mapType" [zoom]="zoom" [disableDefaultUI]="false">
+        <agm-marker [latitude]="lat" [longitude]="lng">
+            <agm-info-window>
+                <strong>{{address}}</strong>
+            </agm-info-window>
+        </agm-marker>
+    </agm-map>
+
+    <!-- Right tools-->
+    <div fxLayout="column">
+        <div>
+            <button mat-raised-button color="accent" (click)="getCurrentPosition()">MY POSITION</button>
+        </div><br>
+        <mat-google-maps-autocomplete
+            [appearance]="appearance.OUTLINE"
+            (onAutocompleteSelected)="onAutocompleteSelected($event)"
+            (onLocationSelected)="onLocationSelected($event)"
+        ></mat-google-maps-autocomplete><br>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{address}}
+                </mat-panel-title>
+                <mat-panel-description></mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>Latitude: {{lat}}</p>
+            <p>Longitude: {{lng}}</p>
+        </mat-expansion-panel>
+    </div>
+</div>
+
+
+
